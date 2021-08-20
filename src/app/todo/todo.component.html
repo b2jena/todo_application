@@ -18,10 +18,10 @@
     </div>      
 </div>
 <!-- write logic to display below text if todoList is empty -->
-<p *ngIf="">Todo tasks List is empty!!!</p>   
+<p *ngIf="todoList==null">Todo tasks List is empty!!!</p>   
     <!-- todo table should be displayed if todoList is not empty, 
         write logic to structural directive *ngIf -->
-<table *ngIf="">
+<table *ngIf="todoList!=null">
     <caption>Todo Tasks</caption>
     <tr>
         <th id="id-th1"> Todo name</th>
@@ -31,14 +31,14 @@
 
      <!-- todos should be displayed if todoList is not empty, 
         write logic to immplement structural directive *ngFor -->
-    <tr *ngFor="">
+    <tr *ngFor="let todo of todoList;let i=index">
         <!-- write logic for ngClass to check isCompleted attribute of todo 
             and display as strike is isCompleted (use strike class from css) otherwise as normal text-->
-        <td> <h5  [ngClass]="todo.isCompleted ? 'strike':''"></h5></td>
+        <td> <h5  [ngClass]="todo.isCompleted ? 'strike':''">{{todo.text}}</h5></td>
         <!-- write logic to display button text of todo and implement the click events -->
                 <!-- Display button text based on isCompleted status
             if isCompleted is false then button text has to be Done otherwise Undone -->
-        <td><button  (click)="onCompletingTodo()"></button> </td>
-        <td> <button (click)="onDeletingTodo()">Delete</button></td>
+        <td><button type = "button" (click)="onCompletingTodo(todo)">{{todo.isCompleted}}</button> </td>
+        <td> <button type = "button" (click)="onDeletingTodo(todo)">Delete</button></td>
     </tr>
 </table>
