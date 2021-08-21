@@ -40,4 +40,4 @@ Refer the problem.md file for problem description.
 ## MENTORS TO BEGIN REVIEW YOUR WORK ONLY AFTER
 
 > - You add the respective Mentor as a Reporter/Master into your Assignment Repository
-> - You have checked your Assessment on the Automated Evaluation Tool - Hobbes (Check for necessary steps in your Boilerplate - README.md file. ) and got the required score - Check with your mentor about the Score you must achieve before it is accepted for Manual Submission.
+> - You have checked your Assessment on the Automated Evaluation Tool - Hobbes (Check for necessary steps in your Boilerplate - README.md file. ) and got the required score - Check with your mentor about the Score you must achieve before it is accepted for Manual Submission.# todo-app
